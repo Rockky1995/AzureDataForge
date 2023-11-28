@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+
+public class AzureDataForgeSyncService{
+  // Method for synchronizing data
+  public void SynchronizeData(string source, string destination)
+  {
+    Console.WriteLine($"Synchronizing data from {source} to {destination}...");
+
+
+    // Logic for data synchronization
+    // This can involve API calls, database interactions, etc.
+
+    Console.WriteLine("Data synchronization completed successfully.");
+    }
+
+  // Method for fetching data from Azure SQL Database
+  public List<string> FetchDataFromAzureSQL(string connectionString, string query)
+  {
+    //Logic for fetching data from Azure SQL Database goes here
+    // This could involve using ADO.NET, Entity Framework, etc.
+
+    Console.WriteLine("Fetching data from Azure SQL Database...");
+
+    // For simplicity, returning a sample list of strings
+    return new List<string> {"Data1", "Data2", "Data3" };
+    }
+  }
+class Program
+{
+  static void Main()
+  {
+    AzureDataForgeSyncService syncService = new AzureDataForgeSyncService();
+
+    // Synchronization Method
+    syncService.SynchronizeData("SourceDatabase", "DestinationDatabase");
+
+    // Fetching data from Azure SQL Database
+    List<string> dataFromAzureSQL = syncService.FetchDataFromAzure
+
+    // Displaying fetched data
+    Console.WriteLine("Fetched data from Azure SQL Database:");
+    foreach (string data in dataFromAzureSQL)
+    {
+      Console.WriteLine(data);
+      }
+    }
+  }
